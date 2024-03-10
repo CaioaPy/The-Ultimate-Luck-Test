@@ -1,10 +1,11 @@
 import random
 
-RNG = random.randint(1, 1000)
+RNG = random.randint(1, 10)
+print(RNG)
 
-if 1 <= RNG <= 2:
+if 1 <= RNG <= 3:
     print("common")
-elif 3 <= RNG <= 5:
+elif 4 <= RNG <= 6:
     print("uncommon")
 elif 7 <= RNG <= 9:
     print("good")
