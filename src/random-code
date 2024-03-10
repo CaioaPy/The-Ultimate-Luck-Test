@@ -1,1 +1,8 @@
+import random
 
+RNG = random.randint(1, 10)
+
+if RNG <= 9:
+    print("w")
+elif RNG == 10:
+    print("d")
