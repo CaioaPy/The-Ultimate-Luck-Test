@@ -2,5 +2,11 @@ import random
 
 RNG = random.randint(1, 1000)
 
-if 100 <= RNG <= 30000:
-    print("w")
+if 1 <= RNG <= 2:
+    print("common")
+elif 3 <= RNG <= 5:
+    print("uncommon")
+elif 7 <= RNG <= 9:
+    print("good")
+elif RNG == 10:
+    print("rare")
