@@ -1,8 +1,6 @@
 import random
 
-RNG = random.randint(1, 10)
+RNG = random.randint(1, 1000)
 
-if RNG <= 9:
+if 100 <= RNG <= 30000:
     print("w")
-elif RNG == 10:
-    print("d")
