@@ -1,7 +1,6 @@
 import random
 
 RNG = random.randint(1, 100)
-print(RNG)
 
 if 1 <= RNG <= 50:
     print("common (1/2)")
