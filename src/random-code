@@ -3,10 +3,10 @@ import random
 RNG = random.randint(1, 100)
 
 if 1 <= RNG <= 50:
-    print("common (1/2)")
+    print("Common (1/2)")
 elif 51 <= RNG <= 75:
-    print("uncommon 1/4")
+    print("Uncommon 1/4")
 elif 76 <= RNG <= 89:
-    print("good (1/7)")
+    print("Ok (1/7)")
 elif 90 <= RNG <= 100:
-    print("rare (1/10)")
+    print("Rare (1/10)")
