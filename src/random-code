@@ -1,13 +1,13 @@
 import random
 
-RNG = random.randint(1, 10)
+RNG = random.randint(1, 100)
 print(RNG)
 
-if 1 <= RNG <= 3:
+if 1 <= RNG <= 50:
     print("common")
-elif 4 <= RNG <= 6:
+elif 51 <= RNG <= 75:
     print("uncommon")
-elif 7 <= RNG <= 9:
+elif 76 <= RNG <= 90:
     print("good")
-elif RNG == 10:
+elif 91 <= RNG <= 100:
     print("rare")
