@@ -1,7 +1,7 @@
 import random
-
+reroll = ""
 def roll():
-RNG = random.randint(1, 100)
+    RNG = random.randint(1, 100)
     if 1 <= RNG <= 50:
         print("Common (1/2)")
     elif 51 <= RNG <= 70:
@@ -16,8 +16,9 @@ RNG = random.randint(1, 100)
         print("Legendary (1/100)")
     return
 roll()
-reroll = input("wanna roll again? (y/n)")
-if reroll = "y"
-    roll()
-elif reroll = "n"
-    print("Ok your highest luck was: ")
+while reroll != "n":
+    reroll = input("wanna reroll again?")
+    if reroll == "y":
+        roll()
+    elif reroll == "n":
+        print("Ok your highest luck was: ")
