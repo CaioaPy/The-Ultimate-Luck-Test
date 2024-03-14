@@ -1,34 +1,43 @@
 import random
+from typing import final
 reroll = ""
 global highest_luck
 highest_luck = 0
+final_luck = ""
 def roll():
     global highest_luck
+    global final_luck
     RNG = random.randint(1, 100)
     if 1 <= RNG <= 50:
         print("Common (1/2)")
         if highest_luck <= RNG:
             highest_luck = RNG
+            final_luck = "Common (1/2)"
     elif 51 <= RNG <= 70:
         print("Uncommon 1/5")
         if highest_luck <= RNG:
-            highest_luck = RNG
+            highest_luck = RNG 
+            final_luck = "Uncommon (1/5)"
     elif 71 <= RNG <= 85:
         print("Ok (1/9)")
         if highest_luck <= RNG:
             highest_luck = RNG
+            final_luck = "Ok (1/9)"
     elif 86 <= RNG <= 94:
         print("Rare (1/13)")
         if highest_luck <= RNG:
             highest_luck = RNG
+            final_luck = "Rare (1/13)"
     elif 94 <= RNG <= 99:
         print("Epic (1/20)")
         if highest_luck <= RNG:
             highest_luck = RNG
+            final_luck = "Epic (1/20)"
     elif 99 <= RNG <= 100:
         print("Legendary (1/100)")
         if highest_luck <= RNG:
             highest_luck = RNG
+            final_luck = "Legendary (1/100)"
     return
 roll()
 while reroll != "n":
@@ -36,4 +45,7 @@ while reroll != "n":
     if reroll == "y":
         roll()
     elif reroll == "n":
-        print("Ok your highest luck was: ")
+      if highest_luck == 0:
+        print("You didn't get anything")
+      elif highest_luck != 0:
+        print("Ok your higher roll was: " + str(highest_luck) + "\n" + "a " + (final_luck))
