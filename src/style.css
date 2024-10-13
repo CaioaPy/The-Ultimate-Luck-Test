@@ -5,42 +5,49 @@
     background-color: white;
     color: black;
 }
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 100vh; /* Ensures the grid takes the full viewport height */
+}
+
 header {
+    grid-column: 2;
+    grid-row: 1;
     text-align: center;
     margin-top: 20px;
 }
-body {
-    display: grid;
-    grid: 150px / auto auto auto;
-}
+
 h1#title {
-    grid-column: 2;
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;
-    align-items: center; 
-    flex-grow: 1; 
+    font-size: 40px;
 }
+
 div.container {
     grid-column: 2;
+    grid-row: 2;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     justify-content: center;
-    align-items: center; 
-    flex-grow: 1; 
+    align-items: center;
 }
-div.lb{
+
+div.lb {
     grid-column: 3;
+    grid-row: 1;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     justify-content: center;
-    align-items: center; 
-    flex-grow: 1; 
+    align-items: center;
+    font-size: 20px;
 }
+
 h1#myh1 {
     font-size: 40px;
     margin-bottom: 10px;
 }
+
 button#roll {
     width: 200px;
     height: 60px;
