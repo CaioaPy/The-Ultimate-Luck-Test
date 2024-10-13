@@ -5,17 +5,32 @@
     background-color: white;
     color: black;
 }
-body {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 header {
     text-align: center;
     margin-top: 20px;
 }
+body {
+    display: grid;
+    grid: 150px / auto auto auto;
+}
+h1#title {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+    flex-grow: 1; 
+}
 div.container {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+    flex-grow: 1; 
+}
+div.lb{
+    grid-column: 3;
     display: flex;
     flex-direction: column; 
     justify-content: center;
