@@ -4,8 +4,8 @@ const roll_button = document.getElementById("roll");
 function scale_roll(min = 1, max = 10, skew = 2) {
     const random = Math.random();
 
-    if (random < 1 / max) {
-        return scale_roll(min, max * 100, skew);
+    if (random < 10 / max) {
+        return scale_roll(min, max * 10, skew);
     }
 
     const adjusted = Math.pow(Math.random(), skew);
