@@ -46,6 +46,15 @@ div.userRegister{
     margin-top: 20px;
 }
 
+input.buttonForm{
+    height: 20px;
+    width: 50px;
+    border-radius: 5px;
+    border: 2px solid;
+    color: black;
+    cursor: pointer;
+}
+
 div.container{
     grid-column: 2;
     grid-row: 2;
