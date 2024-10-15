@@ -11,6 +11,9 @@ function scale_roll(min = 1, max = 10, skew = 2, next=5) {
 
     const adjusted = Math.pow(Math.random(), skew);
     const roll = Math.floor(min + adjusted * (max - min + 1));
+    if (roll > highest){
+        highest = roll;
+    }
     myh1.innerHTML = roll;
 }
 
