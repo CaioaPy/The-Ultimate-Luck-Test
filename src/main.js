@@ -19,6 +19,12 @@ function scale_roll(min = 1, max = 10, skew = 2, next=5) {
     myh1.innerHTML = roll;
 }
 
+function send(){
+    var username = document.getElementById("username");
+
+    alert("saved!" + username.value + "!");
+}
+
 roll_button.addEventListener("click", function() {
     scale_roll();
 });
