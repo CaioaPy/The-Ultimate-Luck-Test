@@ -17,10 +17,10 @@
     <div class="userRegister">
         <h1>Save your luck!</h1>
         <br><br>
-        <form action="/action_page.php" method="post">
+        <form name="usernameForm" method="post">
             <label>Username:</label>
             <input type="text" name="username" required>
-            <input type="submit" value="Send">
+            <input class="buttonForm" type="submit" value="Send" onclick="send()">
         </form>
     </div>
     <div class="container">
