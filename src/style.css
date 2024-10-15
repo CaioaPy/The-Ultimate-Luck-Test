@@ -24,6 +24,13 @@ h1#title {
     font-size: 40px;
 }
 
+div.user{
+    grid-column: 1;
+    grid-row: 2;
+    text-align: center;
+    margin-top: 20px;
+}
+
 div.container {
     grid-column: 2;
     grid-row: 2;
@@ -42,6 +49,7 @@ div.lbTitle {
     align-items: center;
     font-size: 20px;
 }
+
 div.lbUsers {
     font-size: 20px;
 }
