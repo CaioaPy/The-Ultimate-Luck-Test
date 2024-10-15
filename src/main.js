@@ -1,5 +1,6 @@
 const myh1 = document.getElementById("myh1");
 const roll_button = document.getElementById("roll");
+const highesth1 = document.getElementById("highH1")
 var highest = 0;
 
 function scale_roll(min = 1, max = 10, skew = 2, next=5) {
@@ -13,6 +14,7 @@ function scale_roll(min = 1, max = 10, skew = 2, next=5) {
     const roll = Math.floor(min + adjusted * (max - min + 1));
     if (roll > highest){
         highest = roll;
+        highesth1.innerHTML = highest;
     }
     myh1.innerHTML = roll;
 }
