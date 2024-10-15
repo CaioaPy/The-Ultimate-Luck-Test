@@ -1,5 +1,6 @@
 const myh1 = document.getElementById("myh1");
 const roll_button = document.getElementById("roll");
+var highest = 0;
 
 function scale_roll(min = 1, max = 10, skew = 2, next=5) {
     const random = Math.random();
