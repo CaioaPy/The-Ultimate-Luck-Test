@@ -20,7 +20,7 @@ function scale_roll(min = 1, max = 10, skew = 2, next=5) {
 }
 
 function send(){
-    var username = document.getElementById("username");
+    var username = document.getElementById("usernameid");
 
     alert("saved!" + username.value + "!");
 }
