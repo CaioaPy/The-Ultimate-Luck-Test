@@ -28,7 +28,7 @@ div.user{
     grid-column: 1;
     grid-row: 1;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 70px;
 }
 
 h1#highText{
@@ -72,6 +72,7 @@ div.lbTitle{
     justify-content: center;
     align-items: center;
     font-size: 20px;
+    margin-top: 50px;
 }
 
 div.lbUsers{
