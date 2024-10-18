@@ -7,7 +7,7 @@ function scale_roll(min = 1, max = 10, skew = 2, next=5) {
     const random = Math.random();
 
     if (random < next / max) {
-        return scale_roll(min, max * 10, skew, next += 10);
+        return scale_roll(min, max * 10, skew, next * 5);
     }
 
     const adjusted = Math.pow(Math.random(), skew);
