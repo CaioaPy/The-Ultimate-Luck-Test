@@ -26,7 +26,7 @@ h1#title{
 
 div.user{
     grid-column: 1;
-    grid-row: 2;
+    grid-row: 1;
     text-align: center;
     margin-top: 20px;
 }
@@ -41,7 +41,7 @@ h1#highH1{
 
 div.userRegister{
     grid-column: 1;
-    grid-row: 3;
+    grid-row: 2;
     text-align: center;
     margin-top: 20px;
 }
