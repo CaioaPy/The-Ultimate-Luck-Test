@@ -2,8 +2,7 @@ const myh1 = document.getElementById("myh1");
 const roll_button = document.getElementById("roll");
 const highesth1 = document.getElementById("highH1");
 const usernameForm = document.getElementById("usernameForm");
-const lbUsers = document.querySelector('.lbUsers');
-var highest = 0;
+let highest = 0;
 
 function scale_roll(min = 1, max = 10, skew = 2, next = 5) {
     const random = Math.random();
@@ -24,10 +23,10 @@ function scale_roll(min = 1, max = 10, skew = 2, next = 5) {
 
 async function send(event) {
     event.preventDefault();
-    var username = document.getElementById("usernameid").value;
+    const username = document.getElementById("usernameid").value;
 
     try {
-        const response = await fetch('http://localhost:3000/save-roll', {
+        const response = await fetch('/api/save-roll', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -37,7 +36,6 @@ async function send(event) {
 
         if (response.ok) {
             alert("Saved: " + username + " with roll " + highest + "!");
-            fetchLeaderboard();
         } else {
             alert("Failed to save roll.");
         }
@@ -49,26 +47,32 @@ async function send(event) {
 
 async function fetchLeaderboard() {
     try {
-        const response = await fetch('http://localhost:3000/leaderboard');
+        const response = await fetch('/api/leaderboard');
         if (response.ok) {
-            const leaderboardData = await response.json();
-            lbUsers.innerHTML = '';
-
-            leaderboardData.forEach(user => {
+            const leaderboard = await response.json();
+            // Logic to display the leaderboard in your UI
+            console.log('Leaderboard:', leaderboard);
+            // Here you can update the leaderboard display on the page
+            const lbUsers = document.querySelector('.lbUsers');
+            lbUsers.innerHTML = ''; // Clear existing leaderboard entries
+            leaderboard.forEach(entry => {
                 const p = document.createElement('p');
-                p.textContent = `${user.username}: ${user.roll}`;
+                p.textContent = `${entry.username}: ${entry.roll}`;
                 lbUsers.appendChild(p);
             });
         } else {
-            console.error("Failed to fetch leaderboard");
+            console.error('Failed to fetch leaderboard');
         }
     } catch (error) {
-        console.error('Error:', error);
+        console.error('Error fetching leaderboard:', error);
     }
 }
-document.addEventListener('DOMContentLoaded', fetchLeaderboard);
 
+// Event Listeners
 roll_button.addEventListener("click", function() {
     scale_roll(); 
 });
 usernameForm.addEventListener("submit", send);
+
+// Fetch the leaderboard when the page loads
+document.addEventListener("DOMContentLoaded", fetchLeaderboard);
