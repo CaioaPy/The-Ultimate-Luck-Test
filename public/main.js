@@ -36,6 +36,7 @@ async function send(event) {
 
         if (response.ok) {
             alert("Saved: " + username + " with roll " + highest + "!");
+            highest = 0;
         } else {
             alert("Failed to save roll.");
         }
@@ -50,11 +51,9 @@ async function fetchLeaderboard() {
         const response = await fetch('/api/leaderboard');
         if (response.ok) {
             const leaderboard = await response.json();
-            // Logic to display the leaderboard in your UI
             console.log('Leaderboard:', leaderboard);
-            // Here you can update the leaderboard display on the page
             const lbUsers = document.querySelector('.lbUsers');
-            lbUsers.innerHTML = ''; // Clear existing leaderboard entries
+            lbUsers.innerHTML = '';
             leaderboard.forEach(entry => {
                 const p = document.createElement('p');
                 p.textContent = `${entry.username}: ${entry.roll}`;
@@ -68,11 +67,9 @@ async function fetchLeaderboard() {
     }
 }
 
-// Event Listeners
 roll_button.addEventListener("click", function() {
     scale_roll(); 
 });
 usernameForm.addEventListener("submit", send);
 
-// Fetch the leaderboard when the page loads
 document.addEventListener("DOMContentLoaded", fetchLeaderboard);
