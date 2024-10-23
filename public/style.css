@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: white;
+    background-color: lightyellow;
     color: black;
 }
 
@@ -10,7 +10,7 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    height: 100vh; /* Ensures the grid takes the full viewport height */
+    height: 100vh;
 }
 
 header{
@@ -91,4 +91,8 @@ button#roll{
     border-radius: 5px;
     cursor: pointer;
     background-color: lightsalmon;
+}
+
+input#usernameid{
+    background-color: white;
 }
