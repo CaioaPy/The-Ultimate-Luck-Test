@@ -37,6 +37,7 @@ async function send(event) {
         if (response.ok) {
             alert("Saved: " + username + " with roll " + highest + "!");
             highest = 0;
+            highesth1.innerHTML = 0; 
         } else {
             alert("Failed to save roll.");
         }
